@@ -10,7 +10,7 @@ Integration layer combining HTML types, CSS types, and PointFree HTML rendering 
 ## Overview
 
 This package provides the integration layer that bridges:
-- [swift-html-types](https://github.com/coenttb/swift-html-types) - Type definitions for HTML elements and attributes
+- [swift-html-standard](https://github.com/swift-standards/swift-html-standard) - WHATWG HTML Living Standard implementation with unified API
 - [swift-css-types](https://github.com/coenttb/swift-css-types) - Type definitions for CSS properties and values
 - [pointfree-html](https://github.com/coenttb/pointfree-html) - HTML rendering engine
 
@@ -145,11 +145,11 @@ HTMLCSSPointFreeHTML
 │   ├── swift-css-types (CSSTypes)
 │   └── pointfree-html (PointFreeHTML)
 ├── HTMLElementsPointFreeHTML
-│   ├── swift-html-types (HTML_Standard_Elements)
+│   ├── swift-html-standard (HTML Standard Elements)
 │   ├── HTMLAttributesPointFreeHTML
 │   └── pointfree-html (PointFreeHTML)
 └── HTMLAttributesPointFreeHTML
-    ├── swift-html-types (HTMLAttributeTypes)
+    ├── swift-html-standard (HTML Standard Attributes)
     └── pointfree-html (PointFreeHTML)
 ```
 
@@ -157,9 +157,9 @@ HTMLCSSPointFreeHTML
 
 ### Dependencies
 
+- [swift-html-standard](https://github.com/swift-standards/swift-html-standard): Compatibility wrapper providing unified access to WHATWG HTML implementation with familiar API structure.
+- [swift-css-types](https://github.com/coenttb/swift-css-types): Type definitions for CSS properties and values with compile-time safety.
 - [pointfree-html](https://github.com/coenttb/pointfree-html): A fork of pointfreeco/swift-html with extended functionality.
-- [swift-css-types](https://github.com/coenttb/swift-css-types): A Swift package with foundational types for CSS.
-- [swift-html-types](https://github.com/coenttb/swift-html-types): A Swift package with foundational types for HTML.
 
 ### Used By
 
