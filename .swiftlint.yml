@@ -1,82 +1,97 @@
-disabled_rules:
-  - line_length
-  - identifier_name
-  - nesting  # Allow deeply nested enums for namespacing
-  - redundant_discardable_let  # Preserve 'let _ =' in result builder contexts (required for Swift 6.0+)
-  - opening_brace  # Handled by swift-format
-  - trailing_comma  # Handled by swift-format
-  - trailing_whitespace  # Preserve whitespace in snapshot tests
-  - sorted_imports  # Handled by swift-format (conflicts with SwiftLint's sorting)
-  - orphaned_doc_comment  # Allow module-level documentation
-  - large_tuple  # CSS/HTML properties may require tuples with multiple components
-  - mark  # Allow flexible MARK comment formatting
-  - redundant_string_enum_value  # Explicit enum values improve clarity for CSS/HTML keywords
+# SwiftLint Configuration for swift-standards
+# Shared across all packages in the workspace
+# Optimized for library/framework development with Swift Testing
 
+# Disabled rules
+disabled_rules:
+  # Type inference & Swift idioms
+  - explicit_type_interface  # Type inference is idiomatic Swift
+  - explicit_init  # Prefer MyType() over MyType.init()
+  - extension_access_modifier  # Prefer access on members, not extensions
+  - explicit_acl  # Don't require `internal` everywhere
+
+  # Development flexibility
+  - todo  # TODOs are fine in development
+  - force_cast  # Sometimes needed in tests
+  - force_try  # Sometimes needed in tests
+
+  # Length restrictions (swift-format handles line length)
+  - line_length  # HTML attributes can be 300+ chars; swift-format handles this
+  - file_length  # Comprehensive test files are long
+
+  # Domain complexity
+  - cyclomatic_complexity  # Lookup tables and parsing logic have inherent complexity
+  - function_parameter_count  # Time/Date/RFC initializers legitimately need many parameters
+  - large_tuple  # Component tuples are acceptable for internal use
+
+  # Documentation patterns
+  - file_header  # No consistent pattern across packages
+  - missing_docs  # Documentation via code comments, not strictly required
+
+  # Swift Testing compatibility
+  - identifier_name  # Swift Testing uses backtick names with spaces
+  - type_name  # @Suite uses descriptive names with spaces
+
+  # False positives for our patterns
+  - optional_data_string_conversion  # False positive on [UInt8] -> String conversion
+  - for_where  # Not always clearer than for+if
+  - contains_over_first_not_nil  # False positives on custom firstIndex implementations
+  - sorted_imports  # Handled by swift-format's OrderedImports rule
+  - trailing_comma  # Handled by swift-format (adds trailing commas for better diffs)
+
+# Opt-in rules for code quality
 opt_in_rules:
-  - empty_count
-  - explicit_init
-  - force_cast
-  - force_try
-  - closure_spacing
-  - operator_usage_whitespace
-  - private_outlet
-  - redundant_nil_coalescing
-  - literal_expression_end_indentation
-  - single_test_class
-  - sorted_first_last
-  - vertical_whitespace
-  - legacy_random
-  - no_extension_access_modifier
-  - colon
-  
+  # Bug prevention
+  - unused_optional_binding  # Catch unused let bindings
+
+  # Code quality & cleanliness
+  - implicit_optional_initialization  # Don't initialize optionals to nil (formerly redundant_optional_initialization)
+  - redundant_void_return  # Don't write -> Void
+  - empty_string  # Use .isEmpty not == ""
+  - vertical_whitespace  # Consistent spacing
+
+# Analyzer rules (require --analyze flag)
+analyzer_rules:
+  - unused_import  # Remove unnecessary imports
+
+  # Performance optimizations
+  - empty_count  # Use .isEmpty instead of .count == 0
+  - first_where  # Prefer first(where:) over filter().first
+  - last_where  # Prefer last(where:) over filter().last
+  - contains_over_range_nil_comparison  # Better performance
+  - sorted_first_last  # Prefer sorted().first/last
+
+  # Style consistency
+  - closure_spacing  # Consistent closure formatting
+  - operator_usage_whitespace  # Consistent operator spacing
+
+  # Safety
+  - array_init  # Safer array initialization
+  - fatal_error_message  # Require messages in fatalError
+  - legacy_random  # Use modern random APIs
+  - overridden_super_call  # Ensure super is called when needed
+
+# Paths
 included:
-  - Package.swift
   - Sources
   - Tests
 
 excluded:
-  - Carthage
-  - Pods
-  - fastlane
-  - build
+  - .build
+  - .swiftpm
 
-analyzer_rules:
-  - unused_import
+# Rule configurations
 
-colon:
-  apply_to_dictionaries: true
-
-vertical_whitespace:
-  max_empty_lines: 1
-
-# Increased length limits for test files with extensive snapshots
-type_body_length:
-  warning: 800
-  error: 900
-
-file_length:
-  warning: 900
-  error: 1000
-
+# Allow longer functions for complex performance logic
 function_body_length:
-  warning: 270
-  error: 300
+  warning: 60
+  error: 100
 
-# Allow short type names for HTML/CSS elements (H1, BR, B, RGB, HSL, etc.)
-type_name:
-  min_length:
-    warning: 1
-    error: 0
-  max_length:
-    warning: 40
-    error: 50
+# Allow larger types for comprehensive test suites
+type_body_length:
+  warning: 400
+  error: 600
 
-# Allow more function parameters for HTML/CSS functions with many attributes
-function_parameter_count:
-  warning: 8
-  error: 10
-
-# Increased cyclomatic complexity for CSS/HTML property parsing functions
-cyclomatic_complexity:
-  warning: 16
-  error: 20
+# Nesting depth
+nesting:
+  type_level: 2
