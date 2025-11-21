@@ -5,8 +5,8 @@
 //  Created by Coen ten Thije Boonkkamp on 05/04/2025.
 //
 
-import HTMLAttributesPointFreeHTML
 import HTML_Standard_Elements
+import HTMLAttributesPointFreeHTML
 import PointFreeHTML
 
 extension HTML_Standard_Elements.Script {
@@ -23,8 +23,7 @@ extension HTML_Standard_Elements.Script {
             if scalar == "<",
                 script.unicodeScalars[index...].starts(with: "<!--".unicodeScalars)
                     || script.unicodeScalars[index...].starts(with: "<script".unicodeScalars)
-                    || script.unicodeScalars[index...].starts(with: "</script".unicodeScalars)
-            {
+                    || script.unicodeScalars[index...].starts(with: "</script".unicodeScalars) {
                 escaped.unicodeScalars.append(contentsOf: #"\x3C"#.unicodeScalars)
             } else {
                 escaped.unicodeScalars.append(scalar)
@@ -32,7 +31,7 @@ extension HTML_Standard_Elements.Script {
         }
 
         return HTMLElement(tag: Self.tag) {
-            if script == "" { HTMLEmpty() } else { HTMLRaw(escaped) }
+            if script.isEmpty { HTMLEmpty() } else { HTMLRaw(escaped) }
         }
         .src(self.src)
         .`async`(self.`async`)

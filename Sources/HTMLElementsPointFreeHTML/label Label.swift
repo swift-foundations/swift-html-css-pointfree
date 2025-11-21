@@ -8,13 +8,14 @@
 /////
 //
 
-import HTMLAttributesPointFreeHTML
 import HTML_Standard_Elements
+import HTMLAttributesPointFreeHTML
 
 extension HTML_Standard_Elements.Label {
-    public func callAsFunction(@HTMLBuilder _ content: () -> some PointFreeHTML.HTML)
-        -> some PointFreeHTML.HTML
-    {
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    )
+        -> some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { content() }
             .for(self.for)
     }

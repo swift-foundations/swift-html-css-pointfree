@@ -5,8 +5,8 @@
 //  Created by Coen ten Thije Boonkkamp on 05/04/2025.
 //
 
-import HTMLAttributesPointFreeHTML
 import HTML_Standard_Elements
+import HTMLAttributesPointFreeHTML
 
 extension HTML_Standard_Elements.BlockQuote {
     public func callAsFunction(

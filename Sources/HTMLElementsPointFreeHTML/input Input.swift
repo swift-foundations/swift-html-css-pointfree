@@ -6,8 +6,8 @@
 //
 //
 
-import HTMLAttributesPointFreeHTML
 import HTML_Standard_Elements
+import HTMLAttributesPointFreeHTML
 import PointFreeHTML
 
 extension HTML_Standard_Elements.Input: @retroactive PointFreeHTML.HTML {}

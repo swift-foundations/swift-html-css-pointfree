@@ -203,7 +203,7 @@ extension SnapshotTests {
                     </style>
                   </head>
                   <body>
-                <div>Item: 
+                <div>Item:
                   <data value="SKU-789">Premium Coffee Maker
                   </data> is now available.
                 </div>

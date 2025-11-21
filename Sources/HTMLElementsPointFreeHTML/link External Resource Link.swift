@@ -5,8 +5,8 @@
 //  Created by Coen ten Thije Boonkkamp on 05/04/2025.
 //
 
-import HTMLAttributesPointFreeHTML
 import HTML_Standard_Elements
+import HTMLAttributesPointFreeHTML
 import PointFreeHTML
 
 extension HTML_Standard_Elements.Link: PointFreeHTML.HTML {

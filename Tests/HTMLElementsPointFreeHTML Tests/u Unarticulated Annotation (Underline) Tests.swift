@@ -58,7 +58,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>Please check the 
+                <p>Please check the
                   <u>seperate
                   </u> document for more information.
                 </p>
@@ -103,7 +103,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>The city 
+                <p>The city
                   <u>北京
                   </u> (Beijing) is the capital of China.
                 </p>
@@ -210,11 +210,11 @@ extension SnapshotTests {
                     </h3>
                     <p>The following paragraph contains spelling errors:
                     </p>
-                    <p>The 
+                    <p>The
                       <u>recieve
-                      </u> function should 
+                      </u> function should
                       <u>seperate
-                      </u> the data into 
+                      </u> the data into
                       <u>differnt
                       </u> categories.
                     </p>

@@ -119,7 +119,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>The meeting will be held on 
+                <p>The meeting will be held on
                   <ins datetime="2024-03-01T09:00:00Z" cite="https://example.com/meeting-updates/456">Friday, March 8th at 2:00 PM
                   </ins> in the main conference room.
                 </p>
@@ -216,7 +216,7 @@ extension SnapshotTests {
                       </li>
                     </ul>
                   </section>
-                  <p>For technical specifications, please refer to 
+                  <p>For technical specifications, please refer to
                     <ins datetime="2024-02-01T16:30:00Z" cite="https://example.com/technical-specs/v2.1"><a href="https://example.com/specs">the updated technical documentation</a>
                     </ins>.
                   </p>

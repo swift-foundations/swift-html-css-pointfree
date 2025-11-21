@@ -120,7 +120,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>The conference will be held 
+                <p>The conference will be held
                   <del datetime="2024-02-28T16:00:00Z" cite="https://example.com/event-updates/789">in New York
                   </del> virtually via Zoom.
                 </p>
@@ -217,7 +217,7 @@ extension SnapshotTests {
                       </li>
                     </ul>
                   </section>
-                  <p>For more information about these changes, see 
+                  <p>For more information about these changes, see
                     <del datetime="2024-02-01T10:00:00Z" cite="https://example.com/old-migration-guide"><a href="https://example.com/old-guide">the old migration guide</a>
                     </del> our updated documentation.
                   </p>
