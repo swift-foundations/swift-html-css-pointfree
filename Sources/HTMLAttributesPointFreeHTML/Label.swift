@@ -5,7 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 10/04/2025.
 //
 
-import HTMLAttributeTypes
+import HTML_Standard_Attributes
 import PointFreeHTML
 
 extension HTML {
@@ -14,8 +14,8 @@ extension HTML {
     @discardableResult
     @_disfavoredOverload
     package func label(
-        _ value: HTMLAttributeTypes.Label?
+        _ value: Label?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(HTMLAttributeTypes.Label.attribute, value?.description)
+        self.attribute(Label.attribute, value?.description)
     }
 }

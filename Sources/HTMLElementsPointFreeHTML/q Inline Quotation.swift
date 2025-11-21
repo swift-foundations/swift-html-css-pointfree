@@ -6,9 +6,9 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 
-extension HTMLElementTypes.InlineQuotation {
+extension HTML_Standard_Elements.InlineQuotation {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
     ) -> some PointFreeHTML.HTML {

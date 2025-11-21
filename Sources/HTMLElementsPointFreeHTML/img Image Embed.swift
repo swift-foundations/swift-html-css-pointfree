@@ -6,9 +6,9 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 
-extension HTMLElementTypes.Image: PointFreeHTML.HTML {
+extension HTML_Standard_Elements.Image: PointFreeHTML.HTML {
     public var body: some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag)
             .src(self.src)

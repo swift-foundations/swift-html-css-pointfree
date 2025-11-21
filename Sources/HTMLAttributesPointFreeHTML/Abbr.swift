@@ -5,7 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 10/04/2025.
 //
 
-import HTMLAttributeTypes
+import HTML_Standard_Attributes
 import PointFreeHTML
 
 extension HTML {
@@ -13,8 +13,8 @@ extension HTML {
     /// Sets the colspan attribute on an element
     @discardableResult
     package func abbr(
-        _ value: HTMLAttributeTypes.Abbr?
+        _ value: Abbr?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(HTMLAttributeTypes.Abbr.attribute, value?.description)
+        self.attribute(Abbr.attribute, value?.description)
     }
 }

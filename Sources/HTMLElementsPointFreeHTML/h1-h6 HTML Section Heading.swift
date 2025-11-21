@@ -6,9 +6,9 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 
-extension HTMLElementTypes.H1 {
+extension HTML_Standard_Elements.H1 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
     ) -> some PointFreeHTML.HTML {
@@ -16,7 +16,7 @@ extension HTMLElementTypes.H1 {
     }
 }
 
-extension HTMLElementTypes.H2 {
+extension HTML_Standard_Elements.H2 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
     ) -> some PointFreeHTML.HTML {
@@ -24,7 +24,7 @@ extension HTMLElementTypes.H2 {
     }
 }
 
-extension HTMLElementTypes.H3 {
+extension HTML_Standard_Elements.H3 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
     ) -> some PointFreeHTML.HTML {
@@ -32,7 +32,7 @@ extension HTMLElementTypes.H3 {
     }
 }
 
-extension HTMLElementTypes.H4 {
+extension HTML_Standard_Elements.H4 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
     ) -> some PointFreeHTML.HTML {
@@ -40,7 +40,7 @@ extension HTMLElementTypes.H4 {
     }
 }
 
-extension HTMLElementTypes.H5 {
+extension HTML_Standard_Elements.H5 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
     ) -> some PointFreeHTML.HTML {
@@ -48,7 +48,7 @@ extension HTMLElementTypes.H5 {
     }
 }
 
-extension HTMLElementTypes.H6 {
+extension HTML_Standard_Elements.H6 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
     ) -> some PointFreeHTML.HTML {

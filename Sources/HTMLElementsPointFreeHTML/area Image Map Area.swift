@@ -7,7 +7,7 @@
 
 import PointFreeHTML
 
-extension HTMLElementTypes.Area: PointFreeHTML.HTML {
+extension HTML_Standard_Elements.Area: PointFreeHTML.HTML {
     public var body: some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { HTMLEmpty() }
             //        NEED TO FIX AREA domain model

@@ -6,9 +6,9 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 
-extension HTMLElementTypes.ContentDivision {
+extension HTML_Standard_Elements.ContentDivision {
     public func callAsFunction(@HTMLBuilder _ content: () -> some PointFreeHTML.HTML)
         -> some PointFreeHTML.HTML
     {

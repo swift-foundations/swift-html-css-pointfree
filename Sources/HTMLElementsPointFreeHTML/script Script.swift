@@ -6,10 +6,10 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 import PointFreeHTML
 
-extension HTMLElementTypes.Script {
+extension HTML_Standard_Elements.Script {
     public func callAsFunction(
         _ script: () -> String = { "" }
     ) -> some PointFreeHTML.HTML {
@@ -49,7 +49,7 @@ extension HTMLElementTypes.Script {
     }
 }
 
-extension HTMLElementTypes.Script: @retroactive PointFreeHTML.HTML {
+extension HTML_Standard_Elements.Script: @retroactive PointFreeHTML.HTML {
     public var body: some PointFreeHTML.HTML {
         Script(
             src: self.src,

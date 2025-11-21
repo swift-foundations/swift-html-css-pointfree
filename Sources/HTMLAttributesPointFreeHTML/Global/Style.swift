@@ -5,7 +5,7 @@
 /// Created by Coen ten Thije Boonkkamp on 02/04/2025.
 ///
 
-import HTMLAttributeTypes
+import HTML_Standard_Attributes
 import PointFreeHTML
 
 extension HTML {
@@ -32,7 +32,7 @@ extension HTML {
     /// Sets the style attribute using a Style struct
     @discardableResult
     public func style(
-        _ attribute: Style
+        _ attribute: WHATWG_HTML_GlobalAttributes.Style
     ) -> _HTMLAttributes<Self> {
         self.attribute(Style.attribute, attribute.description)
     }

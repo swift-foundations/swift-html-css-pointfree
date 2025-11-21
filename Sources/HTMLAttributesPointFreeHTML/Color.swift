@@ -5,7 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 10/04/2025.
 //
 
-import HTMLAttributeTypes
+import HTML_Standard_Attributes
 import PointFreeHTML
 
 extension HTML {
@@ -13,8 +13,8 @@ extension HTML {
     /// Sets the color attribute on an element
     @discardableResult
     package func color(
-        _ value: HTMLAttributeTypes.Color?
+        _ value: Color?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(HTMLAttributeTypes.Color.attribute, value?.description)
+        self.attribute(Color.attribute, value?.description)
     }
 }

@@ -184,29 +184,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-                <input multiple capture="user" accept="image/png,.png, image/jpeg,.jpg,.jpeg" type="file" name="avatar">
-                """
-            }
-        }
-
-        @Test("File input with predefined accept type renders correctly")
-        func fileInputWithPredefinedAcceptTypeRendersCorrectly() {
-            assertInlineSnapshot(
-                of: Input(
-                    name: "document",
-                    disabled: nil,
-                    form: nil,
-                    type: .file(
-                        .init(
-                            accept: .documents,
-                            multiple: false
-                        )
-                    )
-                ),
-                as: .html
-            ) {
-                """
-                <input accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" type="file" name="document">
+                <input multiple capture="user" accept="image/png, image/jpeg" type="file" name="avatar">
                 """
             }
         }

@@ -6,10 +6,10 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 import PointFreeHTML
 
-extension HTMLElementTypes.Option: PointFreeHTML.HTML {
+extension HTML_Standard_Elements.Option: PointFreeHTML.HTML {
     public var body: some HTML {
         HTMLElement(tag: Self.tag)
             .disabled(self.disabled)

@@ -5,15 +5,15 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import HTMLAttributeTypes
+import HTML_Standard_Attributes
 import PointFreeHTML
 
 extension HTML {
     /// Add an EncType attribute to specify the form data encoding type
     @discardableResult
     package func EncType(
-        _ value: HTMLAttributeTypes.EncType?
+        _ value: EncType?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(HTMLAttributeTypes.EncType.attribute, value?.description)
+        self.attribute(WHATWG_HTML_FormAttributes.EncType.attribute, value?.description)
     }
 }

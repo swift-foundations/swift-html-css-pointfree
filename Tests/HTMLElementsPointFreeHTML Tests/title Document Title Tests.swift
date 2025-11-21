@@ -1,4 +1,4 @@
-import HTMLElementTypes
+import HTML_Standard_Elements
 import HTMLElementsPointFreeHTML
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
@@ -41,7 +41,7 @@ extension SnapshotTests {
         @Test("Title within head element renders correctly")
         func titleWithinHeadElementRendersCorrectly() {
             assertInlineSnapshot(
-                of: HTMLElementTypes.Head {
+                of: HTML_Standard_Elements.Head {
                     Title {
                         HTMLText("Page Title")
                     }
@@ -101,7 +101,7 @@ extension SnapshotTests {
         func titleWithinHTMLDocumentRendersCorrectly() {
             assertInlineSnapshot(
                 of: HTMLDocument {
-                    HTMLElementTypes.Head {
+                    HTML_Standard_Elements.Head {
                         Title {
                             HTMLText("Document Title")
                         }

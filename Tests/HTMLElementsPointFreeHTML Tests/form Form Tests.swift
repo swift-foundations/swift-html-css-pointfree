@@ -1,4 +1,4 @@
-import HTMLElementTypes
+import HTML_Standard_Elements
 import HTMLElementsPointFreeHTML
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
@@ -109,12 +109,12 @@ extension SnapshotTests {
                     Input
                         .file(name: "document")()
                 }
-                .accept(.documents),
+                .accept(.audio),
                 as: .html
             ) {
                 """
 
-                <form accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" method="post" enctype="multipart/form-data" action="/upload" name="upload"><input type="file" name="document">
+                <form accept="audio/*" method="post" enctype="multipart/form-data" action="/upload" name="upload"><input type="file" name="document">
                 </form>
                 """
             }

@@ -6,10 +6,10 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 import PointFreeHTML
 
-extension HTMLElementTypes.Track: PointFreeHTML.HTML {
+extension HTML_Standard_Elements.Track: PointFreeHTML.HTML {
     public var body: some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { HTMLEmpty() }
             .default(self.default)

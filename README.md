@@ -145,7 +145,7 @@ HTMLCSSPointFreeHTML
 │   ├── swift-css-types (CSSTypes)
 │   └── pointfree-html (PointFreeHTML)
 ├── HTMLElementsPointFreeHTML
-│   ├── swift-html-types (HTMLElementTypes)
+│   ├── swift-html-types (HTML_Standard_Elements)
 │   ├── HTMLAttributesPointFreeHTML
 │   └── pointfree-html (PointFreeHTML)
 └── HTMLAttributesPointFreeHTML

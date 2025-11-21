@@ -2,7 +2,7 @@
 // import HTMLElementsPointFreeHTML
 // import InlineSnapshotTesting
 // import PointFreeHTMLTestSupport
-// import HTMLElementTypes
+// import HTML_Standard_Elements
 //
 // @Suite(
 //    "Abbreviation Element Tests",

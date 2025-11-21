@@ -5,5 +5,5 @@
 //  Created by Coen ten Thije Boonkkamp on 04/04/2025.
 //
 
-import HTMLAttributeTypes
+import HTML_Standard_Attributes
 import PointFreeHTML

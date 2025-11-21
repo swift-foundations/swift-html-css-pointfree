@@ -6,10 +6,10 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 import PointFreeHTML
 
-extension HTMLElementTypes.Link: PointFreeHTML.HTML {
+extension HTML_Standard_Elements.Link: PointFreeHTML.HTML {
     public var body: some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { HTMLEmpty() }
             .`as`(self.`as`)

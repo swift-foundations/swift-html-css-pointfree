@@ -5,4 +5,4 @@
 //  Created by Coen ten Thije Boonkkamp on 04/04/2025.
 //
 
-@_exported import HTMLAttributeTypes
+@_exported import HTML_Standard_Attributes

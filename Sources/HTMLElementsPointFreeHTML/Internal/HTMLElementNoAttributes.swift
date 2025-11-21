@@ -5,10 +5,10 @@
 //  Created by Coen ten Thije Boonkkamp on 09/04/2025.
 //
 
-import HTMLElementTypes
+import HTML_Standard_Elements
 import PointFreeHTML
 
-protocol HTMLElementNoAttributes: HTMLElementTypes.HTMLElement {}
+protocol HTMLElementNoAttributes: HTML_Standard_Elements.HTMLElement {}
 
 extension HTMLElementNoAttributes {
     public func callAsFunction(

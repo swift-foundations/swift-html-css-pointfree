@@ -8,5 +8,5 @@
 @_exported import CSSPointFreeHTML
 @_exported import CSSTypes
 @_exported import HTMLElementsPointFreeHTML
-@_exported import HTMLTypes
+@_exported import HTML_Standard
 @_exported import PointFreeHTML

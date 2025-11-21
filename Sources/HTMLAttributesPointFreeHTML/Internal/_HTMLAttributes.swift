@@ -5,7 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 04/04/2025.
 //
 
-import HTMLAttributeTypes
+import HTML_Standard_Attributes
 import PointFreeHTML
 
 extension HTML {
@@ -23,7 +23,7 @@ extension HTML {
     }
 
     @HTMLBuilder
-    package func attribute<Attribute: HTMLBooleanAttribute>(
+    package func attribute<Attribute: WHATWG_HTML.BooleanAttribute>(
         boolean value: Attribute?
     ) -> some PointFreeHTML.HTML {
         self.attribute(Attribute.attribute, value == true)

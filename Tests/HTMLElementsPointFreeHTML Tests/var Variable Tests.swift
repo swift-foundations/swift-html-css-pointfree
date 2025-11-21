@@ -1,4 +1,4 @@
-import HTMLElementTypes
+import HTML_Standard_Elements
 import HTMLElementsPointFreeHTML
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport

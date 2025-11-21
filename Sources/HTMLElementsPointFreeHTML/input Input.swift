@@ -7,12 +7,12 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 import PointFreeHTML
 
-extension HTMLElementTypes.Input: @retroactive PointFreeHTML.HTML {}
+extension HTML_Standard_Elements.Input: @retroactive PointFreeHTML.HTML {}
 
-extension HTMLElementTypes.Input {
+extension HTML_Standard_Elements.Input {
     @HTMLBuilder
     public var body: some PointFreeHTML.HTML {
         let input = HTMLElement(tag: Self.tag) { HTMLEmpty() }

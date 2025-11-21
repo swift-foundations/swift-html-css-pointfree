@@ -1,4 +1,4 @@
-import HTMLElementTypes
+import HTML_Standard_Elements
 import HTMLElementsPointFreeHTML
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
@@ -61,11 +61,11 @@ extension SnapshotTests {
         @Test("Head with stylesheet and script renders correctly")
         func headWithStylesheetAndScriptRendersCorrectly() {
             assertInlineSnapshot(
-                of: HTMLElementTypes.Head {
+                of: HTML_Standard_Elements.Head {
                     Title {
                         HTMLText("Styled Page")
                     }
-                    //                HTMLElementTypes.Link()
+                    //                HTML_Standard_Elements.Link()
                     ////                    .attribute("rel", "stylesheet")
                     ////                    .attribute("href", "/styles.css")
                     //                Style {

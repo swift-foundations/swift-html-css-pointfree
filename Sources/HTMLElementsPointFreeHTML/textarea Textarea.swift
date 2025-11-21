@@ -6,9 +6,9 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 
-extension HTMLElementTypes.Textarea {
+extension HTML_Standard_Elements.Textarea {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML = { HTMLEmpty() }
     ) -> some PointFreeHTML.HTML {

@@ -6,11 +6,11 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 
-// extension HTMLElementTypes.Address: HTMLElementNoAttributes {}
+// extension Address: HTMLElementNoAttributes {}
 
-extension HTMLElementTypes.Address {
+extension HTML_Standard_Elements.Address {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
     ) -> some PointFreeHTML.HTML {

@@ -6,12 +6,12 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 import PointFreeHTML
 
-extension HTMLElementTypes.Param: PointFreeHTML.HTML {
+extension HTML_Standard_Elements.Param: PointFreeHTML.HTML {
     public var body: some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { HTMLEmpty() }
+        PointFreeHTML.HTMLElement(tag: Self.tag) { PointFreeHTML.HTMLEmpty() }
             .name(self.name)
             .value(self.value)
     }

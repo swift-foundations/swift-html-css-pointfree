@@ -6,9 +6,9 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 
-extension HTMLElementTypes.Base {
+extension HTML_Standard_Elements.Base {
     @HTMLBuilder
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML

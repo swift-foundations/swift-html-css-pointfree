@@ -5,7 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 10/04/2025.
 //
 
-import HTMLAttributeTypes
+import HTML_Standard_Attributes
 import PointFreeHTML
 
 extension HTML {
@@ -13,8 +13,8 @@ extension HTML {
     /// Sets the playsinline attribute on an element
     @discardableResult
     package func playsinline(
-        _ value: HTMLAttributeTypes.Playsinline?
+        _ value: Playsinline?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(HTMLAttributeTypes.Playsinline.attribute, value?.description)
+        self.attribute(Playsinline.attribute, value?.description)
     }
 }

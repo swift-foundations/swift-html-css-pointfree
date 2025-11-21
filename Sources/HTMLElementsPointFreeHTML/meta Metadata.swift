@@ -6,10 +6,10 @@
 //
 
 import HTMLAttributesPointFreeHTML
-import HTMLElementTypes
+import HTML_Standard_Elements
 import PointFreeHTML
 
-extension HTMLElementTypes.Meta: PointFreeHTML.HTML {
+extension HTML_Standard_Elements.Meta: PointFreeHTML.HTML {
     public var body: some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { HTMLEmpty() }
             .charset(self.charset)

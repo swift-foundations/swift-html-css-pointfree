@@ -5,7 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 10/04/2025.
 //
 
-import HTMLAttributeTypes
+import HTML_Standard_Attributes
 import PointFreeHTML
 
 extension HTML {
@@ -13,8 +13,8 @@ extension HTML {
     /// Sets the content attribute on an element
     @discardableResult
     package func content(
-        _ value: HTMLAttributeTypes.Content?
+        _ value: HTML_Standard_Attributes.Content?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(HTMLAttributeTypes.Content.attribute, value?.description)
+        self.attribute(HTML_Standard_Attributes.Content.attribute, value?.description)
     }
 }
