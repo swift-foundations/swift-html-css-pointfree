@@ -6,6 +6,8 @@
 //
 
 import HTMLCSSPointFreeHTML
+import CSSPointFreeHTML
+import CSS_Standard
 import PointFreeHTML
 import Testing
 
