@@ -8,8 +8,8 @@
 // import Testing
 // import CSSPointFreeHTML
 // import PointFreeHTML
-// import CSSPropertyTypes
-// import CSSTypeTypes
+// import CSS_Standard
+// import CSS_Standard
 // import Dependencies
 // import DependenciesTestSupport
 // import InlineSnapshotTesting
@@ -17,11 +17,10 @@
 //
 // @Suite(
 //    "AnimationComposition Tests",
-//    .snapshots(record: nil)
 // )
 // struct AnimationCompositionTests {
 //    @Test("HTML element renders with animation-composition replace properly")
-//    func htmlElementWithAnimationCompositionReplaceRendersCorrectly() {
+//    func htmlElementWithAnimationCompositionReplaceRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationComposition(.replace)
@@ -47,7 +46,7 @@
 //    }
 //
 //    @Test("HTML element renders with animation-composition add value")
-//    func htmlElementWithAnimationCompositionAddRendersCorrectly() {
+//    func htmlElementWithAnimationCompositionAddRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationComposition(.add)
@@ -73,7 +72,7 @@
 //    }
 //
 //    @Test("HTML element renders with animation-composition accumulate value")
-//    func htmlElementWithAnimationCompositionAccumulateRendersCorrectly() {
+//    func htmlElementWithAnimationCompositionAccumulateRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationComposition(.accumulate)
@@ -99,7 +98,7 @@
 //    }
 //
 //    @Test("HTML animation-composition with global value renders properly")
-//    func htmlAnimationCompositionWithGlobalValueRendersCorrectly() {
+//    func htmlAnimationCompositionWithGlobalValueRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationComposition(.inherit)
@@ -125,7 +124,7 @@
 //    }
 //
 //    @Test("HTML animation-composition with media query renders properly")
-//    func htmlAnimationCompositionWithMediaQueryRendersCorrectly() {
+//    func htmlAnimationCompositionWithMediaQueryRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationComposition(.add, media: .print)
@@ -153,7 +152,7 @@
 //    }
 //
 //    @Test("HTML animation-composition with pseudo-class renders properly")
-//    func htmlAnimationCompositionWithPseudoClassRendersCorrectly() {
+//    func htmlAnimationCompositionWithPseudoClassRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationComposition(.replace, pseudo: .hover)
@@ -179,7 +178,7 @@
 //    }
 //
 //    @Test("HTML animation-composition with prefix renders properly")
-//    func htmlAnimationCompositionWithPrefixRendersCorrectly() {
+//    func htmlAnimationCompositionWithPrefixRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationComposition(.accumulate, selector: "my-component")

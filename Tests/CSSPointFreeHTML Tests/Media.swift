@@ -1,23 +1,23 @@
 import CSSPointFreeHTML
-import CSSTypes
+import CSS_Standard
 import Dependencies
 import PointFreeHTML
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Media Tests",
-    .snapshots(record: nil)
-)
-struct MediaTests {
-    @Test("HTML element rendering with basic media query")
-    func htmlElementRenderingWithBasicMediaQuery() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.blue, media: .screen)
-            },
-            as: .html
-        ) {
+extension `Snapshot Tests` {
+    @Suite(
+        "Media Tests",
+    )
+    struct MediaTests {
+        @Test("HTML element rendering with basic media query")
+        func htmlElementRenderingWithBasicMediaQuery() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.backgroundColor(.blue, media: .screen)
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
@@ -26,7 +26,7 @@ struct MediaTests {
             @media screen{
               .background-color-uBpH12{background-color:blue}
             }
-
+            
                 </style>
               </head>
               <body>
@@ -35,22 +35,22 @@ struct MediaTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML element rendering with complex media query")
-    func htmlElementRenderingWithComplexMediaQuery() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(
-                    .blue,
-                    media: Media.screen
-                        .and(.maxWidth(.px(500)))
-                        .and(.prefersColorScheme(.dark))
-                )
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML element rendering with complex media query")
+        func htmlElementRenderingWithComplexMediaQuery() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.backgroundColor(
+                        .blue,
+                        media: Media.screen
+                            .and(.maxWidth(.px(500)))
+                            .and(.prefersColorScheme(.dark))
+                    )
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
@@ -59,7 +59,7 @@ struct MediaTests {
             @media screen and (max-width: 500px) and (prefers-color-scheme: dark){
               .background-color-SagMo4{background-color:blue}
             }
-
+            
                 </style>
               </head>
               <body>
@@ -68,17 +68,17 @@ struct MediaTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML element rendering with negated media query")
-    func htmlElementRenderingWithNegatedMediaQuery() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.blue, media: !Media.print)
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML element rendering with negated media query")
+        func htmlElementRenderingWithNegatedMediaQuery() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.backgroundColor(.blue, media: !Media.print)
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
@@ -87,7 +87,7 @@ struct MediaTests {
             @media not print{
               .background-color-KGCk11{background-color:blue}
             }
-
+            
                 </style>
               </head>
               <body>
@@ -96,17 +96,17 @@ struct MediaTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML element rendering with media OR query")
-    func htmlElementRenderingWithMediaOrQuery() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.blue, media: Media.screen || Media.print)
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML element rendering with media OR query")
+        func htmlElementRenderingWithMediaOrQuery() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.backgroundColor(.blue, media: Media.screen || Media.print)
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
@@ -115,7 +115,7 @@ struct MediaTests {
             @media screen, print{
               .background-color-VhiXL{background-color:blue}
             }
-
+            
                 </style>
               </head>
               <body>
@@ -124,17 +124,17 @@ struct MediaTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML element rendering with only operator")
-    func htmlElementRenderingWithOnlyOperator() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.blue, media: Media.screen.only())
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML element rendering with only operator")
+        func htmlElementRenderingWithOnlyOperator() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.backgroundColor(.blue, media: Media.screen.only())
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
@@ -143,7 +143,7 @@ struct MediaTests {
             @media only screen{
               .background-color-bIbz14{background-color:blue}
             }
-
+            
                 </style>
               </head>
               <body>
@@ -152,17 +152,17 @@ struct MediaTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML element rendering with feature-only media query")
-    func htmlElementRenderingWithFeatureOnlyMediaQuery() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.blue, media: .prefersColorScheme(.dark))
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML element rendering with feature-only media query")
+        func htmlElementRenderingWithFeatureOnlyMediaQuery() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.backgroundColor(.blue, media: .prefersColorScheme(.dark))
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
@@ -171,7 +171,7 @@ struct MediaTests {
             @media (prefers-color-scheme: dark){
               .background-color-mMg2X{background-color:blue}
             }
-
+            
                 </style>
               </head>
               <body>
@@ -180,20 +180,20 @@ struct MediaTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML element rendering with multiple properties in media query")
-    func htmlElementRenderingWithMultiplePropertiesInMediaQuery() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div
-                    .backgroundColor(.blue, media: Media.screen && .maxWidth(.px(768)))
-                    .color(.white, media: Media.screen && .maxWidth(.px(768)))
-                    .padding(.px(20), media: Media.screen && .maxWidth(.px(768)))
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML element rendering with multiple properties in media query")
+        func htmlElementRenderingWithMultiplePropertiesInMediaQuery() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div
+                        .backgroundColor(.blue, media: Media.screen && .maxWidth(.px(768)))
+                        .color(.white, media: Media.screen && .maxWidth(.px(768)))
+                        .padding(.px(20), media: Media.screen && .maxWidth(.px(768)))
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
@@ -204,7 +204,7 @@ struct MediaTests {
               .color-iseje4{color:white}
               .background-color-eGELe4{background-color:blue}
             }
-
+            
                 </style>
               </head>
               <body>
@@ -213,19 +213,19 @@ struct MediaTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML element rendering with media query and pseudo-class")
-    func htmlElementRenderingWithMediaQueryAndPseudoClass() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div
-                    .backgroundColor(.blue, media: .screen && .minWidth(.px(768)))
-                    .backgroundColor(.red, media: Media.screen && .minWidth(.px(768)))
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML element rendering with media query and pseudo-class")
+        func htmlElementRenderingWithMediaQueryAndPseudoClass() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div
+                        .backgroundColor(.blue, media: .screen && .minWidth(.px(768)))
+                        .backgroundColor(.red, media: Media.screen && .minWidth(.px(768)))
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
@@ -235,7 +235,7 @@ struct MediaTests {
               .background-color-WW2GU3{background-color:red}
               .background-color-9Kjb11{background-color:blue}
             }
-
+            
                 </style>
               </head>
               <body>
@@ -244,19 +244,19 @@ struct MediaTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML element rendering with multiple media queries")
-    func htmlElementRenderingWithMultipleMediaQueries() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div
-                    .backgroundColor(.blue, media: .screen && .minWidth(.px(768)))
-                    .color(.white, media: .screen && .prefersColorScheme(.dark))
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML element rendering with multiple media queries")
+        func htmlElementRenderingWithMultipleMediaQueries() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div
+                        .backgroundColor(.blue, media: .screen && .minWidth(.px(768)))
+                        .color(.white, media: .screen && .prefersColorScheme(.dark))
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
@@ -268,7 +268,7 @@ struct MediaTests {
             @media screen and (min-width: 768px){
               .background-color-9Kjb11{background-color:blue}
             }
-
+            
                 </style>
               </head>
               <body>
@@ -277,6 +277,7 @@ struct MediaTests {
               </body>
             </html>
             """
+            }
         }
     }
 }

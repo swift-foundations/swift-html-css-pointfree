@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func textTransform(
-        _ textTransform: CSSPropertyTypes.TextTransform?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ textTransform: W3C_CSS_Text.TextTransform?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

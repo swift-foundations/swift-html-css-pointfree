@@ -15,9 +15,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <u>Misspelled word
-                </u>
+                <u>Misspelled word</u>
                 """
             }
         }
@@ -36,9 +34,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>在中国历史上，
-                  <u>秦始皇
-                  </u>是第一个皇帝。
+                <p>在中国历史上，<u>秦始皇</u>是第一个皇帝。
                 </p>
                 """
             }
@@ -58,9 +54,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>Please check the
-                  <u>seperate
-                  </u> document for more information.
+                <p>Please check the <u>seperate</u> document for more information.
                 </p>
                 """
             }
@@ -82,9 +76,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <u><strong>Important</strong> but <em>unarticulated</em> annotation
-                </u>
+                <u><strong>Important</strong> but <em>unarticulated</em> annotation</u>
                 """
             }
         }
@@ -103,9 +95,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>The city
-                  <u>北京
-                  </u> (Beijing) is the capital of China.
+                <p>The city <u>北京</u> (Beijing) is the capital of China.
                 </p>
                 """
             }
@@ -120,9 +110,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <u>Highlighted text
-                </u>
+                <u>Highlighted text</u>
                 """
             }
         }
@@ -198,11 +186,7 @@ extension SnapshotTests {
                     </h3>
                     <p>Identify the proper names in the following text:
                     </p>
-                    <p>在古代中国，
-                      <u>孔子
-                      </u>是一位伟大的哲学家。他的思想影响了整个
-                      <u>中华文明
-                      </u>。
+                    <p>在古代中国，<u>孔子</u>是一位伟大的哲学家。他的思想影响了整个<u>中华文明</u>。
                     </p>
                   </section>
                   <section>
@@ -210,13 +194,7 @@ extension SnapshotTests {
                     </h3>
                     <p>The following paragraph contains spelling errors:
                     </p>
-                    <p>The
-                      <u>recieve
-                      </u> function should
-                      <u>seperate
-                      </u> the data into
-                      <u>differnt
-                      </u> categories.
+                    <p>The <u>recieve</u> function should <u>seperate</u> the data into <u>differnt</u> categories.
                     </p>
                   </section>
                 </article>

@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func contain(
-        _ contain: CSSPropertyTypes.Contain?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ contain: W3C_CSS_Containment.Contain?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

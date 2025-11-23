@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func markerMid(
-        _ markerMid: CSSPropertyTypes.MarkerMid?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ markerMid: W3C_CSS_Images.MarkerMid?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func borderImageOutset(
-        _ borderImageOutset: CSSPropertyTypes.BorderImageOutset?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ borderImageOutset: W3C_CSS_Backgrounds.BorderImageOutset?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

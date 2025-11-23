@@ -1,0 +1,45 @@
+{
+  "configurations" : [
+    {
+      "id" : "5188E5EA-7418-4ADD-AAA4-037D732BF06E",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "HTMLAttributesPointFreeHTML Tests",
+        "name" : "HTMLAttributesPointFreeHTML Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "HTMLElementsPointFreeHTML Tests",
+        "name" : "HTMLElementsPointFreeHTML Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "HTMLCSSPointFreeHTML Tests",
+        "name" : "HTMLCSSPointFreeHTML Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "CSSPointFreeHTML Tests",
+        "name" : "CSSPointFreeHTML Tests"
+      }
+    }
+  ],
+  "version" : 1
+}

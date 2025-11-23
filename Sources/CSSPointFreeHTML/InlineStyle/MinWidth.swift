@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func minWidth(
-        _ minWidth: CSSPropertyTypes.MinWidth?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ minWidth: W3C_CSS_BoxModel.MinWidth?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

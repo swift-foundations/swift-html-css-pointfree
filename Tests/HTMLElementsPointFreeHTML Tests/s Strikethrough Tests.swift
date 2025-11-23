@@ -16,9 +16,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <s>This text is no longer accurate
-                </s>
+                <s>This text is no longer accurate</s>
                 """
             }
         }
@@ -37,9 +35,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>Original price:
-                  <s>$99.99
-                  </s> Now only $79.99!
+                <p>Original price: <s>$99.99</s> Now only $79.99!
                 </p>
                 """
             }
@@ -63,9 +59,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>The event was scheduled for
-                  <s>March 15th
-                  </s> <strong>March 22nd</strong> due to scheduling conflicts.
+                <p>The event was scheduled for <s>March 15th</s> <strong>March 22nd</strong> due to scheduling conflicts.
                 </p>
                 """
             }
@@ -86,9 +80,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <s><strong>SOLD OUT</strong> - <em>This item is no longer available</em>
-                </s>
+                <s><strong>SOLD OUT</strong> - <em>This item is no longer available</em></s>
                 """
             }
         }
@@ -107,9 +99,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>Product status:
-                  <s>Available
-                  </s> - Discontinued
+                <p>Product status: <s>Available</s> - Discontinued
                 </p>
                 """
             }
@@ -184,26 +174,18 @@ extension SnapshotTests {
                     <h3>Pricing Changes
                     </h3>
                     <ul>
-                      <li>Basic Plan:
-                        <s>$9.99/month
-                        </s> now $7.99/month
+                      <li>Basic Plan: <s>$9.99/month</s> now $7.99/month
                       </li>
-                      <li>Premium Plan:
-                        <s>$19.99/month
-                        </s> now $14.99/month
+                      <li>Premium Plan: <s>$19.99/month</s> now $14.99/month
                       </li>
-                      <li>Enterprise Plan:
-                        <s>$49.99/month
-                        </s> now $39.99/month
+                      <li>Enterprise Plan: <s>$49.99/month</s> now $39.99/month
                       </li>
                     </ul>
                   </section>
                   <section>
                     <h3>Feature Updates
                     </h3>
-                    <p>
-                      <s>Beta feature X is now deprecated.
-                      </s> Feature X has been officially released and is available to all users.
+                    <p><s>Beta feature X is now deprecated.</s> Feature X has been officially released and is available to all users.
                     </p>
                   </section>
                 </article>

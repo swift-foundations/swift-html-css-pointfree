@@ -8,8 +8,8 @@
 // import Testing
 // import CSSPointFreeHTML
 // import PointFreeHTML
-// import CSSPropertyTypes
-// import CSSTypeTypes
+// import CSS_Standard
+// import CSS_Standard
 // import Dependencies
 // import DependenciesTestSupport
 // import InlineSnapshotTesting
@@ -17,11 +17,10 @@
 //
 // @Suite(
 //    "AnimationDuration Tests",
-//    .snapshots(record: nil)
 // )
 // struct AnimationDurationTests {
 //    @Test("HTML element renders with animation-duration time value properly")
-//    func htmlElementWithAnimationDurationTimeRendersCorrectly() {
+//    func htmlElementWithAnimationDurationTimeRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationDuration(.time("3s"))
@@ -47,7 +46,7 @@
 //    }
 //
 //    @Test("HTML element renders with animation-duration milliseconds value")
-//    func htmlElementWithAnimationDurationMillisecondsRendersCorrectly() {
+//    func htmlElementWithAnimationDurationMillisecondsRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationDuration(.time("200ms"))
@@ -73,7 +72,7 @@
 //    }
 //
 //    @Test("HTML element renders with animation-duration multiple times")
-//    func htmlElementWithAnimationDurationMultipleTimesRendersCorrectly() {
+//    func htmlElementWithAnimationDurationMultipleTimesRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationDuration(.times(["1s", "2.5s"]))
@@ -99,7 +98,7 @@
 //    }
 //
 //    @Test("HTML animation-duration with global value renders properly")
-//    func htmlAnimationDurationWithGlobalValueRendersCorrectly() {
+//    func htmlAnimationDurationWithGlobalValueRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationDuration(.inherit)
@@ -125,7 +124,7 @@
 //    }
 //
 //    @Test("HTML animation-duration with media query renders properly")
-//    func htmlAnimationDurationWithMediaQueryRendersCorrectly() {
+//    func htmlAnimationDurationWithMediaQueryRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationDuration(.time("0.5s"), media: .print)
@@ -153,7 +152,7 @@
 //    }
 //
 //    @Test("HTML animation-duration with pseudo-class renders properly")
-//    func htmlAnimationDurationWithPseudoClassRendersCorrectly() {
+//    func htmlAnimationDurationWithPseudoClassRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationDuration(.time("1.5s"), pseudo: .hover)
@@ -179,7 +178,7 @@
 //    }
 //
 //    @Test("HTML animation-duration with prefix renders properly")
-//    func htmlAnimationDurationWithPrefixRendersCorrectly() {
+//    func htmlAnimationDurationWithPrefixRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationDuration(.time("300ms"), selector: "my-component")
@@ -205,7 +204,7 @@
 //    }
 //
 //    @Test("HTML animation-duration with zero value renders properly")
-//    func htmlAnimationDurationWithZeroValueRendersCorrectly() {
+//    func htmlAnimationDurationWithZeroValueRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animationDuration(.time("0s"))

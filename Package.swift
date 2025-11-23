@@ -18,14 +18,13 @@ extension Target.Dependency {
 }
 
 extension Target.Dependency {
-    static var cssPropertyTypes: Self { .product(name: "CSSPropertyTypes", package: "swift-css-types") }
-    static var cssAtRuleTypes: Self { .product(name: "CSSAtRuleTypes", package: "swift-css-types") }
-    static var cssTypes: Self { .product(name: "CSSTypes", package: "swift-css-types") }
+    static var cssStandard: Self { .product(name: "CSS Standard", package: "swift-css-standard") }
     static var htmlStandardAttributes: Self { .product(name: "HTML Standard Attributes", package: "swift-html-standard") }
     static var htmlStandardElements: Self { .product(name: "HTML Standard Elements", package: "swift-html-standard") }
     static var htmlStandard: Self { .product(name: "HTML Standard", package: "swift-html-standard") }
     static var pointFreeHTML: Self { .product(name: "PointFreeHTML", package: "pointfree-html") }
     static var pointFreeHtmlTestSupport: Self { .product(name: "PointFreeHTMLTestSupport", package: "pointfree-html") }
+    static var testingPerformance: Self { .product(name: "TestingPerformance", package: "swift-testing-performance") }
 }
 
 let package = Package(
@@ -45,8 +44,9 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/swift-standards/swift-html-standard.git", from: "0.1.0"),
-        .package(url: "https://github.com/coenttb/swift-css-types.git", from: "0.0.1"),
+        .package(url: "https://github.com/swift-standards/swift-css-standard.git", from: "0.1.0"),
         .package(url: "https://github.com/coenttb/pointfree-html.git", from: "2.0.0"),
+        .package(url: "https://github.com/coenttb/swift-testing-performance.git", from: "0.1.0"),
     ],
     targets: [
         .target(
@@ -54,7 +54,7 @@ let package = Package(
             dependencies: [
                 .htmlCSS,
                 .pointFreeHTML,
-                .cssTypes,
+                .cssStandard,
                 .htmlStandard,
                 .htmlElementsPointFreeHTML,
                 .htmlAttributesPointFreeHTML,
@@ -66,12 +66,13 @@ let package = Package(
                 .htmlCSSPointFree,
                 .pointFreeHTML,
                 .pointFreeHtmlTestSupport,
+                .testingPerformance,
             ]
         ),
         .target(
             name: .htmlCSS,
             dependencies: [
-                .cssTypes,
+                .cssStandard,
                 .pointFreeHTML,
             ]
         ),
@@ -79,9 +80,10 @@ let package = Package(
             name: .htmlCSS.tests,
             dependencies: [
                 .htmlCSS,
-                .cssTypes,
+                .cssStandard,
                 .pointFreeHTML,
                 .pointFreeHtmlTestSupport,
+                .testingPerformance,
             ]
         ),
         .target(
@@ -97,6 +99,7 @@ let package = Package(
                 .htmlAttributesPointFreeHTML,
                 .pointFreeHTML,
                 .pointFreeHtmlTestSupport,
+                .testingPerformance,
             ]
         ),
         .target(
@@ -112,7 +115,8 @@ let package = Package(
             dependencies: [
                 .htmlElementsPointFreeHTML,
                 .pointFreeHTML,
-                .pointFreeHtmlTestSupport
+                .pointFreeHtmlTestSupport,
+                .testingPerformance,
             ]
         ),
     ],

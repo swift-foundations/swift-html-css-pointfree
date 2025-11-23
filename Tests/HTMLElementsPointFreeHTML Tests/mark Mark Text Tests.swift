@@ -15,9 +15,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <mark>highlighted
-                </mark>
+                <mark>highlighted</mark>
                 """
             }
         }
@@ -36,9 +34,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>Please review the
-                  <mark>updated section
-                  </mark> carefully.
+                <p>Please review the <mark>updated section</mark> carefully.
                 </p>
                 """
             }
@@ -62,11 +58,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>Search results for '
-                  <mark>swift
-                  </mark>': The
-                  <mark>Swift
-                  </mark> programming language is powerful and intuitive.
+                <p>Search results for '<mark>swift</mark>': The <mark>Swift</mark> programming language is powerful and intuitive.
                 </p>
                 """
             }
@@ -84,9 +76,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <mark><strong>Important</strong> highlighted text
-                </mark>
+                <mark><strong>Important</strong> highlighted text</mark>
                 """
             }
         }
@@ -126,11 +116,7 @@ extension SnapshotTests {
                 <div>
                   <h2>Document Review
                   </h2>
-                  <p>Changes were made to
-                    <mark>section 3.2
-                    </mark> and
-                    <mark>appendix B
-                    </mark>.
+                  <p>Changes were made to <mark>section 3.2</mark> and <mark>appendix B</mark>.
                   </p>
                 </div>
                   </body>

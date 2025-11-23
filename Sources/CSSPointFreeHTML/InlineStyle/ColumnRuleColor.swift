@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func columnRuleColor(
-        _ columnRuleColor: CSSPropertyTypes.ColumnRuleColor?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ columnRuleColor: W3C_CSS_Multicolumn.ColumnRuleColor?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

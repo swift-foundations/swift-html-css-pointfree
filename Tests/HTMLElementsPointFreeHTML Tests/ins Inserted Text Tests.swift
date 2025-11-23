@@ -15,9 +15,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <ins>This text was added to the document
-                </ins>
+                <ins>This text was added to the document</ins>
                 """
             }
         }
@@ -33,9 +31,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <ins datetime="2024-03-15T10:30:00Z">Updated pricing information
-                </ins>
+                <ins datetime="2024-03-15T10:30:00Z">Updated pricing information</ins>
                 """
             }
         }
@@ -51,9 +47,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <ins cite="https://example.com/edit-log/123">Additional safety guidelines
-                </ins>
+                <ins cite="https://example.com/edit-log/123">Additional safety guidelines</ins>
                 """
             }
         }
@@ -70,9 +64,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <ins datetime="2024-01-20T14:15:00Z" cite="https://example.com/changelog/v2.1">New feature: Dark mode support
-                </ins>
+                <ins datetime="2024-01-20T14:15:00Z" cite="https://example.com/changelog/v2.1">New feature: Dark mode support</ins>
                 """
             }
         }
@@ -95,9 +87,7 @@ extension SnapshotTests {
                 as: .html
             ) {
                 """
-
-                <ins datetime="2024-02-10T16:45:00Z"><strong>Important Update:</strong> We have added support for <code>async/await</code> syntax in our JavaScript API.
-                </ins>
+                <ins datetime="2024-02-10T16:45:00Z"><strong>Important Update:</strong> We have added support for <code>async/await</code> syntax in our JavaScript API.</ins>
                 """
             }
         }
@@ -119,9 +109,7 @@ extension SnapshotTests {
             ) {
                 """
 
-                <p>The meeting will be held on
-                  <ins datetime="2024-03-01T09:00:00Z" cite="https://example.com/meeting-updates/456">Friday, March 8th at 2:00 PM
-                  </ins> in the main conference room.
+                <p>The meeting will be held on <ins datetime="2024-03-01T09:00:00Z" cite="https://example.com/meeting-updates/456">Friday, March 8th at 2:00 PM</ins> in the main conference room.
                 </p>
                 """
             }
@@ -202,23 +190,15 @@ extension SnapshotTests {
                     <p>This document has been updated to include:
                     </p>
                     <ul>
-                      <li>
-                        <ins datetime="2024-01-15T11:30:00Z" cite="https://example.com/updates/security">Enhanced security protocols
-                        </ins>
+                      <li><ins datetime="2024-01-15T11:30:00Z" cite="https://example.com/updates/security">Enhanced security protocols</ins>
                       </li>
-                      <li>
-                        <ins datetime="2024-01-20T14:15:00Z" cite="https://example.com/updates/accessibility">Improved accessibility guidelines
-                        </ins>
+                      <li><ins datetime="2024-01-20T14:15:00Z" cite="https://example.com/updates/accessibility">Improved accessibility guidelines</ins>
                       </li>
-                      <li>
-                        <ins datetime="2024-01-25T10:00:00Z">Additional code examples and best practices
-                        </ins>
+                      <li><ins datetime="2024-01-25T10:00:00Z">Additional code examples and best practices</ins>
                       </li>
                     </ul>
                   </section>
-                  <p>For technical specifications, please refer to
-                    <ins datetime="2024-02-01T16:30:00Z" cite="https://example.com/technical-specs/v2.1"><a href="https://example.com/specs">the updated technical documentation</a>
-                    </ins>.
+                  <p>For technical specifications, please refer to <ins datetime="2024-02-01T16:30:00Z" cite="https://example.com/technical-specs/v2.1"><a href="https://example.com/specs">the updated technical documentation</a></ins>.
                   </p>
                 </article>
                   </body>

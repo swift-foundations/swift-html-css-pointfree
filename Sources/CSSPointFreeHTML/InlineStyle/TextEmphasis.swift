@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func textEmphasis(
-        _ textEmphasis: CSSPropertyTypes.TextEmphasis?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ textEmphasis: W3C_CSS_Text.TextEmphasis?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

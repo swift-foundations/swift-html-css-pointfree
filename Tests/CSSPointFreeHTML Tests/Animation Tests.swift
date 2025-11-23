@@ -8,8 +8,8 @@
 // import Testing
 // import CSSPointFreeHTML
 // import PointFreeHTML
-// import CSSPropertyTypes
-// import CSSTypeTypes
+// import CSS_Standard
+// import CSS_Standard
 // import Dependencies
 // import DependenciesTestSupport
 // import InlineSnapshotTesting
@@ -19,11 +19,10 @@
 //
 // @Suite(
 //    "Animation Tests",
-//    .snapshots(record: nil)
 // )
 // struct AnimationTests {
 //    @Test("HTML element renders with animation string value properly")
-//    func htmlElementWithAnimationStringRendersCorrectly() {
+//    func htmlElementWithAnimationStringRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animation(.init(.duration(.s(3)), .timingFunction(.easeIn), .duration(.s(3)), .))
@@ -49,7 +48,7 @@
 //    }
 //
 //    @Test("HTML element renders with animation simple value")
-//    func htmlElementWithAnimationSimpleRendersCorrectly() {
+//    func htmlElementWithAnimationSimpleRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animation(.string("fadeIn 2s"))
@@ -75,7 +74,7 @@
 //    }
 //
 //    @Test("HTML animation with global value renders properly")
-//    func htmlAnimationWithGlobalValueRendersCorrectly() {
+//    func htmlAnimationWithGlobalValueRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animation(.inherit)
@@ -101,7 +100,7 @@
 //    }
 //
 //    @Test("HTML animation with media query renders properly")
-//    func htmlAnimationWithMediaQueryRendersCorrectly() {
+//    func htmlAnimationWithMediaQueryRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animation(.string("bounce 1s"), media: .print)
@@ -129,7 +128,7 @@
 //    }
 //
 //    @Test("HTML animation with pseudo-class renders properly")
-//    func htmlAnimationWithPseudoClassRendersCorrectly() {
+//    func htmlAnimationWithPseudoClassRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animation(.string("pulse 3s infinite"), pseudo: .hover)
@@ -155,7 +154,7 @@
 //    }
 //
 //    @Test("HTML animation with prefix renders properly")
-//    func htmlAnimationWithPrefixRendersCorrectly() {
+//    func htmlAnimationWithPrefixRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animation(.string("slide 2s ease-out"), selector: "my-component")
@@ -181,7 +180,7 @@
 //    }
 //
 //    @Test("HTML animation with none value renders properly")
-//    func htmlAnimationWithNoneValueRendersCorrectly() {
+//    func htmlAnimationWithNoneValueRendersCorrectly() throws {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
 //                div.animation(.none)

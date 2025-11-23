@@ -6,7 +6,7 @@
 //
 
 @_exported import CSSPointFreeHTML
-@_exported import CSSTypes
+@_exported import CSS_Standard
 @_exported import HTML_Standard
 @_exported import HTMLElementsPointFreeHTML
 @_exported import PointFreeHTML

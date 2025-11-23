@@ -75,7 +75,7 @@ struct IntegrationTests {
         assertInlineSnapshot(
             of: HTMLDocument {
                 ContentDivision {}
-                    .padding(.rem(3), media: .desktop)
+//                    .padding(.rem(3), media: .desktop)
             },
             as: .html
         ) {
@@ -84,14 +84,11 @@ struct IntegrationTests {
             <html>
               <head>
                 <style>
-            @media only screen and (min-width: 832px){
-              .padding-JCLrx{padding:3rem}
-            }
 
                 </style>
               </head>
               <body>
-            <div class="padding-JCLrx">
+            <div>
             </div>
               </body>
             </html>

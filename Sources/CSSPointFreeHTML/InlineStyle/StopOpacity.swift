@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func stopOpacity(
-        _ stopOpacity: CSSPropertyTypes.StopOpacity?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ stopOpacity: W3C_CSS_Images.StopOpacity?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

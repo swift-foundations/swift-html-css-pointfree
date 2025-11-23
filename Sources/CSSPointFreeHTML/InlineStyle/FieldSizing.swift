@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func fieldSizing(
-        _ fieldSizing: CSSPropertyTypes.FieldSizing?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ fieldSizing: W3C_CSS_UI.FieldSizing?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

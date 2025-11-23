@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func lineHeight(
-        _ lineHeight: CSSPropertyTypes.LineHeight?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ lineHeight: W3C_CSS_Text.LineHeight?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
@@ -24,7 +24,7 @@ extension HTML {
     @discardableResult
     public func lineHeight<T: BinaryInteger>(
         _ lineHeight: T?,
-        media: CSSAtRuleTypes.Media? = nil,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
@@ -39,7 +39,7 @@ extension HTML {
     @discardableResult
     public func lineHeight<T: BinaryFloatingPoint>(
         _ lineHeight: T?,
-        media: CSSAtRuleTypes.Media? = nil,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

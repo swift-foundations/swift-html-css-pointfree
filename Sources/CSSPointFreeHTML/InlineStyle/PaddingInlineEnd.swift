@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func paddingInlineEnd(
-        _ paddingInlineEnd: CSSPropertyTypes.PaddingInlineEnd?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ paddingInlineEnd: W3C_CSS_BoxModel.PaddingInlineEnd?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

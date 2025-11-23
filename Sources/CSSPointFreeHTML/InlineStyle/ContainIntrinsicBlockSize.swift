@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func containIntrinsicBlockSize(
-        _ containIntrinsicBlockSize: CSSPropertyTypes.ContainIntrinsicBlockSize?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ containIntrinsicBlockSize: W3C_CSS_Containment.ContainIntrinsicBlockSize?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

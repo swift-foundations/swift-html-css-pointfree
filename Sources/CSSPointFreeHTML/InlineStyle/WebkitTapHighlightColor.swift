@@ -5,14 +5,14 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSTypes
+import CSS_Standard
 import PointFreeHTML
 
 extension HTML {
     @discardableResult
     public func webkitTapHighlightColor(
-        _ webkitTapHighlightColor: CSSPropertyTypes.WebkitTapHighlightColor?,
-        media: CSSAtRuleTypes.Media? = nil,
+        _ webkitTapHighlightColor: W3C_CSS_UI.WebkitTapHighlightColor?,
+        media: W3C_CSS_MediaQueries.Media? = nil,
         selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {

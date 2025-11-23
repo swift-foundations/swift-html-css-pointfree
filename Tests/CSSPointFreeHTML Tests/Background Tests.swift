@@ -6,33 +6,34 @@
 //
 
 import CSSPointFreeHTML
-import CSSPropertyTypes
-import CSSTypeTypes
+import CSS_Standard
+import CSS_Standard
 import Dependencies
 import PointFreeHTML
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Background Tests",
-    .snapshots(record: nil)
-)
-struct BackgroundTests {
-    @Test("HTML element renders with background color properly")
-    func htmlElementWithBackgroundColorRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.background(.red)
-            },
-            as: .html
-        ) {
+extension `Snapshot Tests` {
+    @Suite(
+        "Background Tests",
+        .snapshots(record: .failed)
+    )
+    struct BackgroundTests {
+        @Test("HTML element renders with background color properly")
+        func htmlElementWithBackgroundColorRendersCorrectly() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.background(.red)
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
               <head>
                 <style>
             .background-dMYaj4{background:red}
-
+            
                 </style>
               </head>
               <body>
@@ -41,76 +42,76 @@ struct BackgroundTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML element renders with background image properly")
-    func htmlElementWithBackgroundImageRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.background(.image("image.jpg"))
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML element renders with background image properly")
+        func htmlElementWithBackgroundImageRendersCorrectly() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.background(.image("image.jpg"))
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
               <head>
                 <style>
-            .background-g5Rr32{background:url('image.jpg')}
-
+            .background-xvS5W{background:url("image.jpg")}
+            
                 </style>
               </head>
               <body>
-            <div class="background-g5Rr32">
+            <div class="background-xvS5W">
             </div>
               </body>
             </html>
             """
+            }
         }
-    }
-
-    //    @Test("HTML element renders with complex background properly")
-    //    func htmlElementWithComplexBackgroundRendersCorrectly() {
-    //        assertInlineSnapshot(
-    //            of: HTMLDocument {
-    //                div.background(.composite([.color(.red), .image(.url("image.jpg"))]))
-    //            },
-    //            as: .html
-    //        ) {
-    //            """
-    //            <!doctype html>
-    //            <html>
-    //              <head>
-    //                <style>
-    //            .background-yFkjt1{background:red url("image.jpg")}
-    //
-    //                </style>
-    //              </head>
-    //              <body>
-    //            <div class="background-yFkjt1">
-    //            </div>
-    //              </body>
-    //            </html>
-    //            """
-    //        }
-    //    }
-
-    @Test("HTML background with none value renders properly")
-    func htmlBackgroundWithNoneValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.background(Background.none)
-            },
-            as: .html
-        ) {
+        
+        //    @Test("HTML element renders with complex background properly")
+        //    func htmlElementWithComplexBackgroundRendersCorrectly() throws {
+        //        assertInlineSnapshot(
+        //            of: HTMLDocument {
+        //                div.background(.composite([.color(.red), .image(.url("image.jpg"))]))
+        //            },
+        //            as: .html
+        //        ) {
+        //            """
+        //            <!doctype html>
+        //            <html>
+        //              <head>
+        //                <style>
+        //            .background-yFkjt1{background:red url("image.jpg")}
+        //
+        //                </style>
+        //              </head>
+        //              <body>
+        //            <div class="background-yFkjt1">
+        //            </div>
+        //              </body>
+        //            </html>
+        //            """
+        //        }
+        //    }
+        
+        @Test("HTML background with none value renders properly")
+        func htmlBackgroundWithNoneValueRendersCorrectly() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.background(Background.none)
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
               <head>
                 <style>
             .background-Wl0y44{background:none}
-
+            
                 </style>
               </head>
               <body>
@@ -119,24 +120,24 @@ struct BackgroundTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML background with global value renders properly")
-    func htmlBackgroundWithGlobalValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.background(.inherit)
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML background with global value renders properly")
+        func htmlBackgroundWithGlobalValueRendersCorrectly() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.background(.inherit)
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
               <head>
                 <style>
             .background-trEDH1{background:inherit}
-
+            
                 </style>
               </head>
               <body>
@@ -145,17 +146,17 @@ struct BackgroundTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML background with media query renders properly")
-    func htmlBackgroundWithMediaQueryRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.background(.red, media: .print)
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML background with media query renders properly")
+        func htmlBackgroundWithMediaQueryRendersCorrectly() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.background(.red, media: .print)
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
@@ -164,7 +165,7 @@ struct BackgroundTests {
             @media print{
               .background-Igguo2{background:red}
             }
-
+            
                 </style>
               </head>
               <body>
@@ -173,24 +174,24 @@ struct BackgroundTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML background with pseudo-class renders properly")
-    func htmlBackgroundWithPseudoClassRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.background(.red, pseudo: .hover)
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML background with pseudo-class renders properly")
+        func htmlBackgroundWithPseudoClassRendersCorrectly() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.background(.red, pseudo: .hover)
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
               <head>
                 <style>
             .background-S9wdG2:hover{background:red}
-
+            
                 </style>
               </head>
               <body>
@@ -199,24 +200,24 @@ struct BackgroundTests {
               </body>
             </html>
             """
+            }
         }
-    }
-
-    @Test("HTML background with prefix renders properly")
-    func htmlBackgroundWithPrefixRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.background(.red, selector: "my-component")
-            },
-            as: .html
-        ) {
+        
+        @Test("HTML background with prefix renders properly")
+        func htmlBackgroundWithPrefixRendersCorrectly() throws {
+            assertInlineSnapshot(
+                of: HTMLDocument {
+                    div.background(.red, selector: "my-component")
+                },
+                as: .html
+            ) {
             """
             <!doctype html>
             <html>
               <head>
                 <style>
             my-component .background-KoS5g3{background:red}
-
+            
                 </style>
               </head>
               <body>
@@ -225,6 +226,7 @@ struct BackgroundTests {
               </body>
             </html>
             """
+            }
         }
     }
 }
