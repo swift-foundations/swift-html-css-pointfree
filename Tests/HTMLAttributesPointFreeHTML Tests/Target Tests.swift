@@ -6,7 +6,6 @@
 //
 // @Suite(
 //    "Target Attribute Tests",
-////    .snapshots(record: .all)
 // )
 // struct TargetTests {
 //    @Test("Link with target renders correctly")

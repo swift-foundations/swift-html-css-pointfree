@@ -5,8 +5,7 @@
 // import HTML_Standard_Elements
 //
 // @Suite(
-//    "Abbreviation Element Tests",
-//    .snapshots(record: .failed),
+//    "Abbreviation Element Tests"
 // )
 // struct AbbreviationTests {
 //    @Test("Basic abbreviation renders correctly")

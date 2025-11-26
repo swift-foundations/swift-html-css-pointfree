@@ -8,7 +8,6 @@
 import CSSPointFreeHTML
 import CSS_Standard
 import CSS_Standard
-import Dependencies
 import PointFreeHTML
 import PointFreeHTMLTestSupport
 import Testing
@@ -27,21 +26,21 @@ extension `Snapshot Tests` {
                 },
                 as: .html
             ) {
-            """
-            <!doctype html>
-            <html>
-              <head>
-                <style>
-            .accent-color-dMYaj4{accent-color:red}
-            
-                </style>
-              </head>
-              <body>
-            <div class="accent-color-dMYaj4">
-            </div>
-              </body>
-            </html>
-            """
+                """
+                <!doctype html>
+                <html>
+                  <head>
+                    <style>
+                .accent-color-0{accent-color:red}
+
+                    </style>
+                  </head>
+                  <body>
+                <div class="accent-color-0">
+                </div>
+                  </body>
+                </html>
+                """
             }
         }
         

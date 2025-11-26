@@ -8,7 +8,6 @@
 import CSSPointFreeHTML
 import CSS_Standard
 import CSS_Standard
-import Dependencies
 import PointFreeHTML
 import PointFreeHTMLTestSupport
 import Testing

@@ -5,8 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 10/04/2025.
 //
 
-import Dependencies
-import DependenciesTestSupport
+
 import HTMLCSSPointFreeHTML
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
@@ -14,7 +13,7 @@ import Testing
 
 @Suite(
     "HTML+CSS+PointFreeHTML Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .never)
 )
 struct IntegrationTests {
     @Test("HTML element with attributes and styles")
@@ -33,11 +32,11 @@ struct IntegrationTests {
             <html>
               <head>
                 <style>
-            .color-dMYaj4{color:red}
+            .color-0{color:red}
 
                 </style>
               </head>
-              <body><a class="color-dMYaj4" href="#">Click here!</a>
+              <body><a class="color-0" href="#">Click here!</a>
               </body>
             </html>
             """
@@ -69,13 +68,13 @@ struct IntegrationTests {
 
     @Test(
         "General3",
-        .snapshots(record: .failed)
+        .snapshots(record: .never)
     )
     func general3() {
         assertInlineSnapshot(
             of: HTMLDocument {
                 ContentDivision {}
-//                    .padding(.rem(3), media: .desktop)
+                    .padding(.rem(3), media: .desktop)
             },
             as: .html
         ) {
@@ -84,11 +83,14 @@ struct IntegrationTests {
             <html>
               <head>
                 <style>
+            @media only screen and (min-width: 832px){
+              .padding-0{padding:3rem}
+            }
 
                 </style>
               </head>
               <body>
-            <div>
+            <div class="padding-0">
             </div>
               </body>
             </html>
@@ -110,7 +112,7 @@ struct IntegrationTests {
             <html>
               <head>
                 <style>
-            .color-dMYaj4{color:red}
+            .color-0{color:red}
 
                 </style>
               </head>

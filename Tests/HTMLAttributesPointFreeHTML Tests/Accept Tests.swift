@@ -5,8 +5,7 @@
 // import PointFreeHTMLTestSupport
 //
 // @Suite(
-//    "Accept Attribute Tests",
-////    .snapshots(record: .all)
+//    "Accept Attribute Tests"
 // )
 // struct AcceptTests {
 //

@@ -6,7 +6,6 @@
 //
 // @Suite(
 //    "Href Attribute Tests"
-////    .snapshots(record: .all)
 // )
 // struct HrefTests {
 //

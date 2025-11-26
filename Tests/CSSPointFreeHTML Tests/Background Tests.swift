@@ -8,15 +8,13 @@
 import CSSPointFreeHTML
 import CSS_Standard
 import CSS_Standard
-import Dependencies
 import PointFreeHTML
 import PointFreeHTMLTestSupport
 import Testing
 
 extension `Snapshot Tests` {
     @Suite(
-        "Background Tests",
-        .snapshots(record: .failed)
+        "Background Tests"
     )
     struct BackgroundTests {
         @Test("HTML element renders with background color properly")
