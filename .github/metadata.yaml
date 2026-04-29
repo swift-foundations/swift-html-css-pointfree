@@ -1,0 +1,7 @@
+# .github/metadata.yaml
+# Triaged by AI-assisted bulk pass (2026-04-29).
+description: "Integration layer combining HTML types, CSS types, and PointFree HTML rendering for type-safe web development."
+topics:
+  - foundations
+  - html
+homepage: "https://swift-institute.org"
